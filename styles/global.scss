@@ -313,6 +313,12 @@ footer {
   }
 }
 
+.mobileMenuButton{
+  display: hidden !important;
+}
+
+
+
 @media screen and (max-width: 800px) {
   .banner {
     .container {
@@ -324,6 +330,10 @@ footer {
         font-size: 30px;
       }
     }
+  }
+
+  .mobileMenuButton{
+    display: block !important;
   }
 
   .blog-card {
