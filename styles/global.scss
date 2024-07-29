@@ -29,18 +29,42 @@
     font-weight: 600;
     margin: $xl-6 0;
   }
+  @media (max-width: 768px) { /* Adjust this value as needed for your breakpoint */
+    .hero-title {
+      font-size: 1.5rem; /* Adjust font size for small devices */
+      line-height: 1.5; /* Adjust line height for small devices */
+    }
+  }
   .sub-heading {
     display: flex;
     justify-content: center;
+  
     .titleSm {
       margin: 0 $xl-1;
     }
+  
     span {
       font-size: $xll;
       line-height: 0;
       color: $green;
     }
   }
+  
+  @media (max-width: 768px) { 
+    .sub-heading {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 10px; // Adjust font size for small devices
+        line-height: 1.2; // Adjust line height for small devices
+      }
+  
+      .titleSm {
+        margin: 0 $xl-1;
+      }
+    }
+  }
+ 
 }
 .hero-sec {
   position: relative;
