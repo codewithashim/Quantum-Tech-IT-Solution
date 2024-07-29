@@ -40,13 +40,13 @@ export const expertise = [
     id: 3,
     title: "App Development",
     cover: "../images/App.webp",
-    desc: [{ text: "App development" }, { text: "Android development & iOS development" }, { text: "" }, { text: "Hosting" }],
+    desc: [{ text: "App development" }, { text: "Android development" }, { text: "iOS development" }, { text: "Hosting" }],
   },
   {
     id: 4,
     title: "Branding & Creative Services",
     cover: "../images/branding.webp",
-    desc: [{ text: "Visual identity" }, { text: "Branding for social media" }, { text: "Custom illustrations" }],
+    desc: [{ text: "Visual identity" }, { text: "Branding for social media" }, { text: "Creative design" }],
   },
 ]
 export const testimonial = [

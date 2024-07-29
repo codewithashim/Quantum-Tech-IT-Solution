@@ -20,6 +20,9 @@ const Footer = () => {
               <h3>
                 <a href="tel:+917982082271">+91 79820 82271</a>
               </h3>
+              <h3>
+                <a href="tel:+917982082271">+91 8890923521</a>
+              </h3>
               <br />
               <button className='button-primary'>Request for quote</button>
             </div>

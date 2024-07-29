@@ -1,7 +1,23 @@
-import Banner from "@/components/Banner"
-import Brand from "@/components/Brand"
-import Testimonial from "@/components/Testimonial"
-import { Title, TitleSm } from "@/components/common/Title"
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+import Banner from "@/components/Banner";
+import Brand from "@/components/Brand";
+import Testimonial from "@/components/Testimonial";
+import { Title, TitleSm } from "@/components/common/Title";
+
+const AnimatedNumber = ({ end }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <div ref={ref}>
+      {inView ? <CountUp end={end} duration={2} /> : '0+'}
+    </div>
+  );
+};
 
 const Agency = () => {
   return (
@@ -16,19 +32,19 @@ const Agency = () => {
 
           <div className='content flex1'>
             <div className='left w-60 py'>
-              <TitleSm title='Turning your business ideas into smart digital products since 2001' />
-              <p className='desc-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus eleifend magna, molestie iaculis sem pulvinar eu. Etiam non dui felis. Proin posuere dapibus magna laoreet posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, sem eget sollicitudin tempor, libero velit aliquam enim, vel egestas tortor ante quis sem.</p>
+              <TitleSm title='Turning your business ideas into smart digital products.' />
+              <p className='desc-p'>As a leading development agency, we specialize in transforming your business concepts into innovative and high-performing digital products. Our team of experts employs cutting-edge technologies and industry best practices to deliver solutions that drive success and growth. Join us on a journey of digital excellence and let’s create something extraordinary together.</p>
               <div className='grid-3'>
                 <div className='box'>
-                  <h1 className='indigo'>10+</h1>
+                  <h1 className='indigo flex'><AnimatedNumber end={4} />+</h1>
                   <h3>Years of experience</h3>
                 </div>
                 <div className='box'>
-                  <h1 className='indigo'>50+</h1>
-                  <h3>Successful cases</h3>
+                  <h1 className='indigo flex'><AnimatedNumber end={100} />+</h1>
+                  <h3>Successful Projects</h3>
                 </div>
                 <div className='box'>
-                  <h1 className='indigo'>12+</h1>
+                  <h1 className='indigo flex'><AnimatedNumber end={12} />+</h1>
                   <h3>Industry awards</h3>
                 </div>
               </div>
@@ -45,7 +61,7 @@ const Agency = () => {
             <div className='right w-60 ml'>
               <TitleSm title='Our mission' />
               <br />
-              <p className='misson-p'>Fusce fringilla justo vel dui consectetur, fringilla maximus ante malesuada. Suspendisse facilisis nisl augue, ut sollicitudin lectus ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis esse vitae officia nostrum facere. Fugiat voluptates, expedita dolore at perferendis quae libero fuga consequatur veniam, eius non fugit nulla vitae?</p>
+              <p className='misson-p'>At Quantum Tech, our mission is to empower businesses with innovative digital solutions. We push the boundaries of technology to create cutting-edge products that enhance user experiences and drive growth. We maintain the highest standards of quality, ensuring robust and reliable solutions tailored to our clients' needs. Through strong, transparent relationships, we collaborate closely with clients to achieve their goals. We invest in our team's continuous development to stay ahead of industry trends and promote sustainable practices in our operations. Join us to transform your business ideas into smart digital products for a brighter future.</p>
             </div>
           </div>
         </div>
@@ -59,7 +75,7 @@ const Agency = () => {
       <br />
       <br />
     </>
-  )
+  );
 }
 
-export default Agency
+export default Agency;
