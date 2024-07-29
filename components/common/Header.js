@@ -22,7 +22,7 @@ const Header = () => {
               <TitleLogo  caption='QUANTUMTECH' className='logomin' />
             </Link>
           </div>
-          <nav className={open ? "openMenu" : "closeMenu"} onClick={() => setOpen(null)}>
+          <nav className={`${open ? "openMenu" : "none"} `} onClick={() => setOpen(null)}>
             <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
               Home
             </Link>
@@ -44,9 +44,9 @@ const Header = () => {
             <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
               Contact
             </Link>
-            <button className='button-primary'>book a consultation</button>
+          
           </nav>
-          <button className="mobileMenuButton" onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
+          <button className="mobileMenuButton sm:hidden flex" onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
         </div>
       </header>
     </>

@@ -11,7 +11,7 @@ const Banner = () => {
             <TitleLogo title='Lets take your business to the next level!' />
           </div>
           <div>
-            <button className='button-primary'>Request a call-back</button>
+            <button className='button-primary animation-primary'>Request a call-back</button>
           </div>
         </div>
       </section>

@@ -6,7 +6,8 @@ import { BiUser } from "react-icons/bi"
 export const home = [
   {
     icon: <AiOutlineCalendar size={25} />,
-    title: "10+ years of market experience",
+    count: 4,
+    suffix: "+ years of market experience",
   },
   {
     icon: <TfiRulerPencil size={25} />,
@@ -14,7 +15,8 @@ export const home = [
   },
   {
     icon: <VscFileSubmodule size={25} />,
-    title: "100+ cuccessful cases in portfolio",
+    count: 100,
+    suffix: "+ Successful projects in portfolio",
   },
   {
     icon: <BiUser size={25} />,
@@ -31,89 +33,90 @@ export const expertise = [
   {
     id: 2,
     title: "Digital Marketing",
-    cover: "../images/e2.jpg",
+    cover: "../images/social.webp",
     desc: [{ text: "Social media marketing" }, { text: "Marketing campaigns" }, { text: "Markting management" }, { text: "SEO" }],
   },
   {
     id: 3,
-    title: "E-Commerce",
-    cover: "../images/e3.jpg",
-    desc: [{ text: "E-Commerce website design" }, { text: "WooCommerce" }, { text: "Content management" }, { text: "Hosting" }],
+    title: "App Development",
+    cover: "../images/App.webp",
+    desc: [{ text: "App development" }, { text: "Android development & iOS development" }, { text: "" }, { text: "Hosting" }],
   },
   {
     id: 4,
     title: "Branding & Creative Services",
-    cover: "../images/e4.jpg",
+    cover: "../images/branding.webp",
     desc: [{ text: "Visual identity" }, { text: "Branding for social media" }, { text: "Custom illustrations" }],
   },
 ]
 export const testimonial = [
   {
     id: 1,
-    name: "Alexander Black",
-    cover: "../images/e1.jpg",
-    post: "Seven consulting - CEO",
-    desc: "Nunc fermentum - tempus erat ligula, sit amet lacinia justo cursus ac. Suspendisse quis nulla tincidunt! Lorem ipsum dolor amet at ornare ex, quis fringilla tortor! Nunc consectetur feugiat rutrum. Sed rhoncus sapien!",
+    name: "Amit Patel",
+    cover: "../images/men-avatar.webp",
+    post: "Tech Solutions - CEO",
+    desc: "Quantum Tech has revolutionized our business operations. The team's expertise and dedication have been exceptional. Their innovative solutions have significantly improved our efficiency and productivity.",
   },
   {
     id: 2,
-    name: "Diana Green",
-    cover: "../images/e2.jpg",
-    post: "Seven Arts - marketing manager",
-    desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
+    name: "Priya Sharma",
+    cover: "../images/women-avatar.webp",
+    post: "Creative Minds - Marketing Manager",
+    desc: "Working with Quantum Tech has been a transformative experience. Their marketing strategies have helped us reach new heights. The team's creativity and attention to detail are truly commendable.",
   },
   {
     id: 3,
-    name: "Alexander Black",
-    cover: "../images/e3.jpg",
-    post: "Seven consulting - CEO",
-    desc: "Nunc fermentum - tempus erat ligula, sit amet lacinia justo cursus ac. Suspendisse quis nulla tincidunt! Lorem ipsum dolor amet at ornare ex, quis fringilla tortor! Nunc consectetur feugiat rutrum. Sed rhoncus sapien!",
+    name: "Rajiv Menon",
+    cover: "../images/men-avatar.webp",
+    post: "Innovate Corp - CTO",
+    desc: "Quantum Tech have been a game-changer for our company. Their deep understanding of the latest tech trends and their implementation have driven our success.",
   },
   {
     id: 4,
-    name: "Diana Green",
-    cover: "../images/e4.jpg",
-    post: "Seven Arts - marketing manager",
-    desc: "Cras at ornare fermentum quam et tortor euismod, vel maximus metus tristique at ornare ex, quis fringilla tortor. Aenean semper neque quis consectetur lobortis. Quisque nec convallis ex. Aenean ut metus et nunc cursus aliquet.",
+    name: "Neha Gupta",
+    cover: "../images/women-avatar.webp",
+    post: "Elegant Events - Event Manager",
+    desc: "Elegant Events has made our corporate gatherings seamless and memorable. Their meticulous planning and flawless execution are unmatched. We couldn't be happier with their services.",
   },
 ]
+
 export const showcase = [
   {
     id: 1,
-    title: "Neon Lights",
-    cover: "../images/s1.jpg",
-    catgeory: "DIGITAL MARKETING",
+    title: "Zee Work",
+    cover: "../images/freelancer.webp",
+    catgeory: "WEBSITE",
+    path :"https://www.zeework.co/",
   },
   {
     id: 2,
-    title: "Futuristic Furniture",
+    title: "CoFoundersLab",
     catgeory: "WEBSITES",
-    cover: "../images/s2.jpg",
+    cover: "../images/cofounder.webp",
+    path:"https://cofounderslab.com/"
   },
   {
     id: 3,
-    title: "Smart Living",
-    cover: "../images/s3.jpg",
+    title: "MakeMyLisiting",
+    cover: "../images/makemylisting.webp",
     catgeory: "WEBSITES",
+    path:"https://makemylisting.com.au/"
   },
   {
     id: 4,
-    title: "Light Painting",
-    cover: "../images/s4.jpg",
+    title: "LEVERAGE EDU",
+    cover: "../images/edu.webp",
     catgeory: "BRANDING	",
+    path: "https://leverageedu.com/"
   },
   {
     id: 5,
-    title: "Ideabox",
-    cover: "../images/s5.jpg",
+    title: "TOO MUCH WIFI",
+    cover: "../images/toomuchwifi.webp",
     catgeory: "BRANDING	",
+    path :"https://toomuchwifi.co.za/"
   },
-  {
-    id: 5,
-    title: "VR Experience",
-    cover: "../images/s6.jpg",
-    catgeory: "WEBSITES	",
-  },
+ 
 ]
 export const brand = [
   {
