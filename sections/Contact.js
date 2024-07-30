@@ -47,19 +47,44 @@ const Contact = () => {
       tempErrors.phone = "Phone number is not valid. It should be 10 digits.";
     }
     if (!formData.timeframe) tempErrors.timeframe = "Timeframe is required.";
-    if (!formData.project) tempErrors.project = "Project description is required.";
+    if (!formData.project) {
+      tempErrors.project = "Project description is required.";
+    } else if (formData.project.split(' ').length < 20) {
+      tempErrors.project = "Project description must be at least 20 words.";
+    }
 
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
+  };
+
+  const formatDate = (date) => {
+    const d = new Date(date);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validate()) {
+      const submissionData = {
+        ...formData,
+        date: formatDate(new Date()), // Format the date to dd/mm/yyyy
+      };
+
       try {
-        await client.create(formData);
+        await client.create(submissionData);
         alert("Your enquiry has been submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          timeframe: "",
+          project: "",
+        });
+        setErrors({});
       } catch (error) {
         console.error("Error submitting the form: ", error);
         alert("There was an error submitting your enquiry. Please try again.");
