@@ -19,7 +19,7 @@ const ShowCase = () => {
             ))}
           </div>
           <div className='card links'>
-            <Link href='/'>
+            <Link href='/showcase'>
               VIEW ALL PROJECTS <HiOutlineArrowRight className='link-icon' />
             </Link>
           </div>
