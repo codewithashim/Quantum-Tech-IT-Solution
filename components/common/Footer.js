@@ -90,10 +90,10 @@ const Footer = () => {
           </div>
           <div className='legal connect py'>
             <div className='text'>
-              <span>© 2024 Quantum Tech Development.</span>
+              <span>© 2024 QuantumTech Development.</span>
             </div>
             <div className='connect'>
-              <span>QUANTUM TECH COMPANY</span>
+              <span>QUANTUMTECH COMPANY</span>
               <span> &nbsp; | &nbsp; </span>
               <span>TERMS & CONDITIONS</span>
             </div>

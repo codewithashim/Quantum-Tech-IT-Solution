@@ -6,7 +6,7 @@ const contact = () => {
   return (
     <>
       <Head>
-        <title>Contact - Quantum Tech IT Solution</title>
+        <title>Contact - QuantumTech IT Solution</title>
       </Head>
       <Contact />
     </>

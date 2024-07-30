@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <>
       <section className='banner'>
-        <div className='container'>
+        <div className='container mb-10'>
           <div>
             <Title title='We are looking forward to start a new project' /> <br />
             <TitleLogo title='Lets take your business to the next level!' />

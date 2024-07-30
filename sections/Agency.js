@@ -61,7 +61,7 @@ const Agency = () => {
             <div className='right w-60 ml'>
               <TitleSm title='Our mission' />
               <br />
-              <p className='misson-p'>At Quantum Tech, our mission is to empower businesses with innovative digital solutions. We push the boundaries of technology to create cutting-edge products that enhance user experiences and drive growth. We maintain the highest standards of quality, ensuring robust and reliable solutions tailored to our clients' needs. Through strong, transparent relationships, we collaborate closely with clients to achieve their goals. We invest in our team's continuous development to stay ahead of industry trends and promote sustainable practices in our operations. Join us to transform your business ideas into smart digital products for a brighter future.</p>
+              <p className='misson-p'>At QuantumTech, our mission is to empower businesses with innovative digital solutions. We push the boundaries of technology to create cutting-edge products that enhance user experiences and drive growth. We maintain the highest standards of quality, ensuring robust and reliable solutions tailored to our clients' needs. Through strong, transparent relationships, we collaborate closely with clients to achieve their goals. We invest in our team's continuous development to stay ahead of industry trends and promote sustainable practices in our operations. Join us to transform your business ideas into smart digital products for a brighter future.</p>
             </div>
           </div>
         </div>

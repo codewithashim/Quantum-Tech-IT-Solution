@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Quantum Tech IT Solution</title>
+        <title>QuantumTech IT Solution</title>
       </Head>
       <Hero />
     </>

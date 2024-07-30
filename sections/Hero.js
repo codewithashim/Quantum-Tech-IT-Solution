@@ -9,6 +9,7 @@ import Testimonial from "@/components/Testimonial"
 import { Title, TitleLogo, TitleSm } from "@/components/common/Title"
 import { BlogCard, Brand } from "@/components/router"
 import { useInView } from 'react-intersection-observer'
+import PricingComponent from "@/components/PricingComponent"
 
 const Hero = () => {
   const { ref, inView } = useInView({
@@ -20,7 +21,7 @@ const Hero = () => {
     <>
       <section className='hero pt-28'>
         <div className='container'>
-          <TitleLogo title='QUANTUM TECH' caption='' className='logobg' />
+          <TitleLogo title='QUANTUMTECH' caption='' className='logobg' />
           <h1 className='hero-title'>WE BUILD DIGITAL EXPERIENCES</h1>
 
           <div className='sub-heading animation-primary'>
@@ -35,7 +36,7 @@ const Hero = () => {
           <div className='heading-title'>
             <Title title='The last digital agency you ll ever need' />
             <p>
-              At Quantum Tech, our expertise spans across various domains. Whether it's building a website, developing a mobile app, or creating an effective digital marketing strategy, our team has the skills and experience to deliver exceptional results.
+              At QuantumTech, our expertise spans across various domains. Whether it's building a website, developing a mobile app, or creating an effective digital marketing strategy, our team has the skills and experience to deliver exceptional results.
             </p>
           </div>
           <div className='hero-content grid-4'>
@@ -57,13 +58,23 @@ const Hero = () => {
       </section>
       <Expertise />
       <Banner />
-      <Testimonial />
+      <div className='text-center'>
+        <Title title='Low Cost Website Design Plans' />
+      </div>
+
+      <PricingComponent />
       <ShowCase />
+      <Testimonial />
+      
       <Brand />
+
+
+     
 
       <div className='text-center'>
         <Title title='Latest news & articles' />
       </div>
+      
       <BlogCard />
     </>
   )
