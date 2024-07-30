@@ -53,7 +53,7 @@ const Testimonial = () => {
   }
   return (
     <>
-      <section className='testimonial'>
+      <section className='testimonial px-5'>
         <div className='container'>
           <div className='heading-title'>
             <TitleSm title='WHAT CLIENTS SAY ABOUT OUR WORK' />
