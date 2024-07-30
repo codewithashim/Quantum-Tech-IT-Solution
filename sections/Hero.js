@@ -19,10 +19,10 @@ const Hero = () => {
 
   return (
     <>
-      <section className="hero pt-28">
-        <div className="container">
-          <TitleLogo title="QUANTUMTECH" caption="" className="logobg" />
-          <h1 className="hero-title">WE BUILD DIGITAL EXPERIENCES</h1>
+      <section className='hero pt-28 '>
+        <div className='container'>
+          <TitleLogo title='QUANTUMTECH' caption='' className='logobg' />
+          <h1 className='hero-title'>WE BUILD DIGITAL EXPERIENCES</h1>
 
           <div className="sub-heading animation-primary">
             <TitleSm title="WEBSITES" /> <span>.</span>
