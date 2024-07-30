@@ -49,7 +49,7 @@ const Contact = () => {
     if (!formData.timeframe) tempErrors.timeframe = "Timeframe is required.";
     if (!formData.project) {
       tempErrors.project = "Project description is required.";
-    } else if (formData.project.split(' ').length < 20) {
+    } else if (formData.project.split(' ').length < 5) {
       tempErrors.project = "Project description must be at least 20 words.";
     }
 
