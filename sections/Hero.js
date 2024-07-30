@@ -10,6 +10,7 @@ import { Title, TitleLogo, TitleSm } from "@/components/common/Title"
 import { BlogCard, Brand } from "@/components/router"
 import { useInView } from 'react-intersection-observer'
 import PricingComponent from "@/components/PricingComponent"
+import Starfield from "@/components/Star"
 
 const Hero = () => {
   const { ref, inView } = useInView({
@@ -19,10 +20,10 @@ const Hero = () => {
 
   return (
     <>
-      <section className="hero pt-28">
-        <div className="container">
-          <TitleLogo title="QUANTUMTECH" caption="" className="logobg" />
-          <h1 className="hero-title">WE BUILD DIGITAL EXPERIENCES</h1>
+      <section className='hero pt-28 '>
+        <div className='container'>
+          <TitleLogo title='QUANTUMTECH' caption='' className='logobg' />
+          <h1 className='hero-title'>WE BUILD DIGITAL EXPERIENCES</h1>
 
           <div className="sub-heading animation-primary">
             <TitleSm title="WEBSITES" /> <span>.</span>
@@ -63,6 +64,16 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
+      <div className="App">
+      <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.05}
+        backgroundColor="black"
+      />
+      {/* Other components */}
+    </div>
       <Expertise />
       <Banner />
       <div className="text-center">
