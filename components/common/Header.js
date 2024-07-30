@@ -16,41 +16,69 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className='container'>
-          <div className='logo'>
-            <Link href='/'>
-              <TitleLogo  caption='QUANTUMTECH' className='logomin' />
+        <div className="container lg:max-w-screen-xl mx-auto">
+          <div className="logo">
+            <Link href="/">
+              <TitleLogo caption="QUANTUMTECH" className="logomin" />
             </Link>
           </div>
-          <nav className={`${open ? "openMenu" : "none"} `} onClick={() => setOpen(null)}>
-            <Link href='/' className={activeLink == "/" ? "activeLink" : "none"}>
+          <nav
+            className={`${open ? "openMenu" : "none"} `}
+            onClick={() => setOpen(null)}
+          >
+            <Link
+              href="/"
+              className={activeLink == "/" ? "activeLink" : "none"}
+            >
               Home
             </Link>
-            <Link href='/agency' className={activeLink == "/agency" ? "activeLink" : "none"}>
+            <Link
+              href="/agency"
+              className={activeLink == "/agency" ? "activeLink" : "none"}
+            >
               Agency
             </Link>
-            <Link href='/team' className={activeLink == "/team" ? "activeLink" : "none"}>
+            <Link
+              href="/team"
+              className={activeLink == "/team" ? "activeLink" : "none"}
+            >
               Team
             </Link>
-            <Link href='/services' className={activeLink == "/services" ? "activeLink" : "none"}>
+            <Link
+              href="/services"
+              className={activeLink == "/services" ? "activeLink" : "none"}
+            >
               Services
             </Link>
-            <Link href='/showcase' className={activeLink == "/showcase" ? "activeLink" : "none"}>
+            <Link
+              href="/showcase"
+              className={activeLink == "/showcase" ? "activeLink" : "none"}
+            >
               Showcase
             </Link>
-            <Link href='/blogs' className={activeLink == "/blogs" ? "activeLink" : "none"}>
+            <Link
+              href="/blogs"
+              className={activeLink == "/blogs" ? "activeLink" : "none"}
+            >
               Blog
             </Link>
-            <Link href='/contact' className={activeLink == "/contact" ? "activeLink" : "none"}>
+            <Link
+              href="/contact"
+              className={activeLink == "/contact" ? "activeLink" : "none"}
+            >
               Contact
             </Link>
-          
           </nav>
-          <button className="mobileMenuButton sm:hidden flex" onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}</button>
+          <button
+            className="mobileMenuButton sm:hidden flex"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <AiOutlineClose size={25} /> : <RiMenu4Line size={25} />}
+          </button>
         </div>
       </header>
     </>
-  )
+  );
 }
 
 export default Header

@@ -6,14 +6,17 @@ import React from "react"
 const Services = () => {
   return (
     <>
-      <section className='agency bg-top'>
-        <div className='container'>
-          <div className='heading-title'>
-            <TitleSm title='SERVICES' /> <br />
+      <section className="agency bg-top">
+        <div className="container">
+          <div className="heading-title mb-10">
+            <TitleSm title="SERVICES" /> <br />
             <br />
-            <Title title='Unique technologies & modern approach' className='title-bg' />
+            <Title
+              title="Unique technologies & modern approach"
+              className="title-bg"
+            />
           </div>
-          <div className='grid-2 py'>
+          <div className="grid-2 lg:max-w-screen-xl lg:mx-auto">
             {expertise.map((item) => (
               <Card data={item} key={item.id} caption={item.post} show={true} />
             ))}
@@ -21,7 +24,7 @@ const Services = () => {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export default Services

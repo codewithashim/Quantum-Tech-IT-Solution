@@ -23,7 +23,8 @@ export const Card = ({ data, caption, show, path = "#" }) => {
             </Link>
           )}
           <div className="flex">
-            <span>{data.category}</span> {data.date && <span>/ {data.date}</span>}
+            <span>{data.category}</span>{" "}
+            {data.date && <span>/ {data.date}</span>}
           </div>
 
           {show && (

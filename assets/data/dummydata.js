@@ -177,31 +177,31 @@ export const blogdata = [
 export const teamdata = [
   {
     id: 1,
-    title: "Alexander Black",
+    title: "Aryan Raj",
     cover: "../images/t1.jpg",
     post: "FOUNDER, CEO",
   },
   {
     id: 2,
-    title: "Anna Kovalenko",
+    title: "Ashim Rudra Paul",
     cover: "../images/t2.jpg",
     post: "FINANCE DIRECTOR",
   },
   {
     id: 3,
-    title: "Tiffany White",
+    title: "Saurabh Pandey",
     cover: "../images/t3.jpg",
     post: "CREATIVE DIRECTOR",
   },
   {
     id: 4,
-    title: "Richard Greenwood",
+    title: "Avinash Sharma",
     cover: "../images/t4.jpg",
     post: "PROGRAMMER",
   },
   {
     id: 5,
-    title: "Jessica Brown",
+    title: "Vaibhavi shrivastav",
     cover: "../images/t5.jpg",
     post: "MARKETING DIRECTOR",
   },
@@ -223,4 +223,4 @@ export const teamdata = [
     cover: "../images/t8.jpg",
     post: "",
   },
-]
+];
