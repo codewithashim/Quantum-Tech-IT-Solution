@@ -1,12 +1,74 @@
-import { Title, TitleSm } from "@/components/common/Title"
-import React from "react"
-import { AiFillBehanceCircle, AiFillInstagram, AiFillLinkedin } from "react-icons/ai"
-import { BiUserCircle } from "react-icons/bi"
-import { BsFacebook } from "react-icons/bs"
-import { FiHeadphones, FiHelpCircle } from "react-icons/fi"
-import { IoLocationOutline } from "react-icons/io5"
+import { Title, TitleSm } from "@/components/common/Title";
+import React, { useState } from "react";
+import { AiFillBehanceCircle, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { BiUserCircle } from "react-icons/bi";
+import { BsFacebook } from "react-icons/bs";
+import { FiHeadphones, FiHelpCircle } from "react-icons/fi";
+import { IoLocationOutline } from "react-icons/io5";
+import sheetdb from 'sheetdb-node';
+
+// Create a config file with your SheetDB API URL
+const config = {
+  address: 'https://sheetdb.io/api/v1/oef13fopncqb7',
+};
+
+// Create a new client
+const client = sheetdb(config);
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    timeframe: "",
+    project: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!formData.name) tempErrors.name = "Name is required.";
+    if (!formData.email) {
+      tempErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      tempErrors.email = "Email is not valid.";
+    }
+    if (!formData.phone) {
+      tempErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      tempErrors.phone = "Phone number is not valid. It should be 10 digits.";
+    }
+    if (!formData.timeframe) tempErrors.timeframe = "Timeframe is required.";
+    if (!formData.project) tempErrors.project = "Project description is required.";
+
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (validate()) {
+      try {
+        await client.create(formData);
+        alert("Your enquiry has been submitted successfully!");
+      } catch (error) {
+        console.error("Error submitting the form: ", error);
+        alert("There was an error submitting your enquiry. Please try again.");
+      }
+    } else {
+      alert("Please fill out all fields correctly.");
+    }
+  };
+
   return (
     <>
       <section className="contact bg-top">
@@ -63,32 +125,37 @@ const Contact = () => {
                 proposal.{" "}
               </p>
 
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="grid-2">
                   <div className="inputs">
                     <span>Name</span>
-                    <input type="text" />
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                    {errors.name && <p className="error text-red-500">{errors.name}</p>}
                   </div>
                   <div className="inputs">
                     <span>Email</span>
-                    <input type="text" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                    {errors.email && <p className="error">{errors.email}</p>}
                   </div>
                 </div>
                 <div className="grid-2">
                   <div className="inputs">
-                    <span>your budget</span>
-                    <input type="text" />
+                    <span>Your Phone Number</span>
+                    <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
+                    {errors.phone && <p className="error">{errors.phone}</p>}
                   </div>
                   <div className="inputs">
-                    <span>timeframe</span>
-                    <input type="text" />
+                    <span>Timeframe</span>
+                    <input type="text" name="timeframe" value={formData.timeframe} onChange={handleChange} />
+                    {errors.timeframe && <p className="error">{errors.timeframe}</p>}
                   </div>
                 </div>
                 <div className="inputs">
-                  <span>TELL US A BIT ABOUT YOUR PROJECT*</span>
-                  <textarea cols="30" rows="10"></textarea>
+                  <span>Tell us a bit about your project*</span>
+                  <textarea name="project" cols="30" rows="10" value={formData.project} onChange={handleChange}></textarea>
+                  {errors.project && <p className="error">{errors.project}</p>}
                 </div>
-                <button className="button-primary">Submit</button>
+                <button className="button-primary" type="submit">Submit</button>
               </form>
             </div>
           </div>
@@ -96,6 +163,6 @@ const Contact = () => {
       </section>
     </>
   );
-}
+};
 
-export default Contact
+export default Contact;
