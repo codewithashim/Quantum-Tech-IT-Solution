@@ -1,33 +1,33 @@
-import React from "react"
-import { TitleSm } from "./common/Title"
-import Link from "next/link"
-import { testimonial } from "@/assets/data/dummydata"
-import { HiOutlineArrowRight } from "react-icons/hi"
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+import React from "react";
+import { TitleSm } from "./common/Title";
+import Link from "next/link";
+import { testimonial } from "@/assets/data/dummydata";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function SampleNextArrow(props) {
-  const { onClick } = props
+  const { onClick } = props;
   return (
-    <div className='slick-arrow'>
-      <button className='next' onClick={onClick}>
+    <div className="slick-arrow">
+      <button className="next" onClick={onClick}>
         <RiArrowRightSLine size={25} />
       </button>
     </div>
-  )
+  );
 }
 
 function SamplePrevArrow(props) {
-  const { onClick } = props
+  const { onClick } = props;
   return (
-    <div className='slick-arrow'>
-      <button className='prev' onClick={onClick}>
+    <div className="slick-arrow">
+      <button className="prev" onClick={onClick}>
         <RiArrowLeftSLine size={25} />
       </button>
     </div>
-  )
+  );
 }
 
 const Testimonial = () => {
@@ -50,7 +50,7 @@ const Testimonial = () => {
         },
       },
     ],
-  }
+  };
   return (
     <>
       <section className="testimonial lg:max-w-screen-xl mx-auto">
@@ -88,6 +88,6 @@ const Testimonial = () => {
       </section>
     </>
   );
-}
+};
 
-export default Testimonial
+export default Testimonial;
