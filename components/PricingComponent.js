@@ -79,10 +79,10 @@ const pricingPlans = [
         ]
         ,
         proPlusFeatures: [
-            'Live Chat | Whatsapp Chat',
-            'Payment Gateway Integration',
-            '1 Year Free Support',
-            '3 Free Update After Delivery',
+            'Premium OnPage SEO',
+            'Free .com or .in Domain',
+            'Poweful Admin Panel',
+            '2x More Faster Website',
         ],
     },
 ];

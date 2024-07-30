@@ -147,31 +147,31 @@ export const brand = [
 export const blogdata = [
   {
     id: 1,
-    title: "Ligula vel urna accumsan placerat",
+    title: "Developing SaaS Applications for Startups: How to Build a Successful Solution",
     cover: "../images/b1.webp",
     catgeory: "INDUSTRY",
-    date: "JANUARY 12, 2023",
+    date: "",
   },
   {
     id: 2,
-    title: "Don’t underestimate the lorem ipsum dolor amet",
+    title: "6 Levers Of Growth For Successful Development Of Your Company",
     cover: "../images/b2.jpg",
     catgeory: "TIPS & TRICKS",
-    date: "OCTOBER 20, 2023",
+    date: "",
   },
   {
     id: 3,
     title: "Building the real VR lorem ipsum dolor amet glavrida from a scratch",
     cover: "../images/b3.jpg",
     catgeory: "TIPS & TRICKS",
-    date: "OCTOBER 9, 2023",
+    date: "",
   },
   {
     id: 4,
-    title: "What eleifend posuere tincidunt",
+    title: "How AI is Changing the Landscape of the Online Food Delivery Industry?",
     cover: "../images/b4.jpg",
     catgeory: "EVENTS",
-    date: "OCTOBER 8, 2023",
+    date: "",
   },
 ]
 export const teamdata = [
