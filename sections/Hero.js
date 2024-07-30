@@ -19,34 +19,41 @@ const Hero = () => {
 
   return (
     <>
-      <section className='hero pt-28'>
-        <div className='container'>
-          <TitleLogo title='QUANTUMTECH' caption='' className='logobg' />
-          <h1 className='hero-title'>WE BUILD DIGITAL EXPERIENCES</h1>
+      <section className="hero pt-28">
+        <div className="container">
+          <TitleLogo title="QUANTUMTECH" caption="" className="logobg" />
+          <h1 className="hero-title">WE BUILD DIGITAL EXPERIENCES</h1>
 
-          <div className='sub-heading animation-primary'>
-            <TitleSm title='WEBSITES' /> <span>.</span>
-            <TitleSm title='APP DEVELOPMENT' /> <span>.</span>
-            <TitleSm title='DIGITAL MARKETING' />
+          <div className="sub-heading animation-primary">
+            <TitleSm title="WEBSITES" /> <span>.</span>
+            <TitleSm title="APP DEVELOPMENT" /> <span>.</span>
+            <TitleSm title="DIGITAL MARKETING" />
           </div>
         </div>
       </section>
-      <section className='hero-sec' ref={ref}>
-        <div className='container'>
-          <div className='heading-title'>
-            <Title title='The last digital agency you ll ever need' />
+      <section className="hero-sec" ref={ref}>
+        <div className="container w-full mx-auto lg:max-w-screen-xl">
+          <div className="heading-title">
+            <Title title="The last digital agency you ll ever need" />
             <p>
-              At QuantumTech, our expertise spans across various domains. Whether it's building a website, developing a mobile app, or creating an effective digital marketing strategy, our team has the skills and experience to deliver exceptional results.
+              At QuantumTech, our expertise spans across various domains.
+              Whether it's building a website, developing a mobile app, or
+              creating an effective digital marketing strategy, our team has the
+              skills and experience to deliver exceptional results.
             </p>
           </div>
-          <div className='hero-content grid-4'>
+          <div className="hero-content grid-4 lg:max-w-screen-xl lg:mx-auto w-full">
             {home.map((item, i) => (
-              <div className='box' key={i}>
-                <span className='green'>{item.icon}</span> <br />
+              <div className="box" key={i}>
+                <span className="green">{item.icon}</span> <br />
                 <br />
                 <h3>
                   {item.count && inView ? (
-                    <CountUp end={item.count} duration={3} suffix={item.suffix} />
+                    <CountUp
+                      end={item.count}
+                      duration={3}
+                      suffix={item.suffix}
+                    />
                   ) : (
                     item.title
                   )}
@@ -58,26 +65,23 @@ const Hero = () => {
       </section>
       <Expertise />
       <Banner />
-      <div className='text-center'>
-        <Title title='Low Cost Website Design Plans' />
+      <div className="text-center">
+        <Title title="Low Cost Website Design Plans" />
       </div>
 
       <PricingComponent />
       <ShowCase />
       <Testimonial />
-      
+
       <Brand />
 
-
-     
-
-      <div className='text-center'>
-        <Title title='Latest news & articles' />
+      <div className="text-center">
+        <Title title="Latest news & articles" />
       </div>
-      
+
       <BlogCard />
     </>
-  )
+  );
 }
 
 export default Hero

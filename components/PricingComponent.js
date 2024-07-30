@@ -89,52 +89,56 @@ const pricingPlans = [
 
 const PricingComponent = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen container pb-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {pricingPlans.map((plan, index) => (
-                    <div key={index} className="bg-transparent shadow-md rounded-lg p-6">
-                        <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
-                        <p className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</p>
-                        <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 mb-4">
-                            Order Now
-                        </button>
-                        <p className="text-gray-500 text-sm mb-6">{plan.renewal}</p>
-                        <ul className="mb-4 border border-gray-700 p-3 rounded-xl">
-                            {plan.features.map((feature, i) => (
-                                <li key={i} className="text-gray-700 mb-1">
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                        {plan.proFeatures && (
-                            <>
-                                <h4 className="text-green-600 font-bold mb-2">Pro</h4>
-                                <ul className="border border-dashed border-gray-700 p-3 rounded-xl">
-                                    {plan.proFeatures.map((feature, i) => (
-                                        <li key={i} className="text-gray-700 mb-1">
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        )}
-                        {plan.proPlusFeatures && (
-                            <>
-                                <h4 className="text-green-600 font-bold mb-2">Pro+</h4>
-                                <ul className="border border-dashed border-gray-700 p-3 rounded-xl">
-                                    {plan.proFeatures.map((feature, i) => (
-                                        <li key={i} className="text-gray-700 mb-1">
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        )}
-
-                    </div>
+      <div className="flex flex-col items-center justify-center min-h-screen container pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pricingPlans.map((plan, index) => (
+            <div
+              key={index}
+              className="bg-transparent shadow-md rounded-lg p-6"
+            >
+              <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
+              <p className="text-4xl font-bold text-blue-600 mb-2">
+                {plan.price}
+              </p>
+              <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 mb-4">
+                Order Now
+              </button>
+              <p className="text-white text-sm mb-6">{plan.renewal}</p>
+              <ul className="mb-4 border border-gray-700 p-3 rounded-xl">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="text-slate-400 mb-1">
+                    {feature}
+                  </li>
                 ))}
+              </ul>
+              {plan.proFeatures && (
+                <>
+                  <h4 className="text-green-600 font-bold mb-2">Pro</h4>
+                  <ul className="border border-dashed border-gray-700 p-3 rounded-xl">
+                    {plan.proFeatures.map((feature, i) => (
+                      <li key={i} className="text-slate-400 mb-1">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {plan.proPlusFeatures && (
+                <>
+                  <h4 className="text-green-600 font-bold mb-2">Pro+</h4>
+                  <ul className="border border-dashed border-gray-700 p-3 rounded-xl">
+                    {plan.proFeatures.map((feature, i) => (
+                      <li key={i} className="text-slate-400 mb-1">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
+          ))}
         </div>
+      </div>
     );
 };
 
