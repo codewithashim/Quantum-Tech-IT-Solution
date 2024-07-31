@@ -18,7 +18,7 @@ const Services = () => {
           </div>
           <div className="grid-2 lg:max-w-screen-xl lg:mx-auto">
             {expertise.map((item) => (
-              <Card data={item} key={item.id} caption={item.post} show={true} />
+              <Card data={item} key={item.id} caption={item.post} show={true} height="h-96"/>
             ))}
           </div>
         </div>
