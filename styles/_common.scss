@@ -16,6 +16,14 @@
     font-size: 50px;
   }
 }
+@media screen and (max-width: 600px) {
+  .logobg {
+    font-size: $xll;
+    span {
+      font-size: 40px;
+    }
+  }
+}
 .titleSm {
   font-size: $xl-3;
   font-weight: 500;
