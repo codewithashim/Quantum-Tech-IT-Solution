@@ -2,12 +2,12 @@ import Link from "next/link";
 import { TitleSm } from "./Title";
 import { HiOutlineArrowRight } from "react-icons/hi";
 
-export const Card = ({ data, caption, show, path = "#" }) => {
+export const Card = ({ data, caption, show, path = "#" ,height}) => {
   return (
     <>
       <div className="card">
         <div className="card-img">
-          <img src={data.cover} alt={data.title} className="w-96 h-96" />
+          <img src={data.cover} alt={data.title} className={`w-96 ${height ? `h-${height}` : 'h-full'}`}  />
         </div>
         <div className="card-details">
           <Link href={path} legacyBehavior>

@@ -19,7 +19,7 @@ const Team = () => {
           </div>
           <div className="grid-4 py lg:max-w-screen-xl lg:mx-auto">
             {teamdata.map((item) => (
-              <Card data={item} key={item.id} caption={item.post} />
+              <Card data={item} key={item.id} caption={item.post} height={"96"} />
             ))}
           </div>
         </div>
